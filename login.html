@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"></script>
+    <script>
+        function validate()
+        {
+             var email=document.laravel.email.value;
+            var password=document.laravel.password.value;
+
+             if(email==null || email=='')
+             {
+                 alert("email can't be blank");
+                 return false;
+             }
+              else if(password.length<6)
+              {
+                  alert("password must be 6 char lenth");
+                return false;
+              }
+        }
+    </script>
+
+</head>
+<center>
+<body>
+        
+            <table class="mt-5 p-3">
+                <fieldset>
+                <form name="laravel"  method="post" onclick="return validate();"  action="index.html">
+                    
+                        <legend> Information</legend>
+                <tr>
+                    <th><label for="email" name="email" class=" m-3">E_mail</label></th>
+                    <td>
+                         <input type="text" name="email" class="form-control mb-3 p-1"  placeholder="name@example.com"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="password" name="password" class="m-3">Password</label></th>
+                    <td>
+                        <input type="text" name="password" class="form-control mb-3 p-1"  placeholder="Enter password"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="btn btn-primary "  value="login"/></td>
+                    <td><input class="btn btn-info" type="reset"/></td>
+                </tr>
+            
+            </form>
+        </fieldset>
+            </table>
+</body>
+</center>
+</html>
